@@ -61,10 +61,11 @@ public class OrderService {
     }
 
     public void printResult(List<Map.Entry<String, Double>> collection) {
+        System.out.println("Три самых дорогих товара");
         collection.forEach(entry -> {
-            System.out.println(String.format("%s %f", entry.getKey(), entry.getValue()));
+            System.out.println(String.format("%1$s = %2$s", entry.getKey(), entry.getValue()));
                 });
-        System.out.println(getSum(collection));
+        System.out.println("Их общая стоимсть " + getSum(collection));
     }
 
 }
